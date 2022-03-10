@@ -1,4 +1,4 @@
-$("#currentTime").text("");
+$("#currentTime").text();
 
 $(".saveBtn").on("click", function(){
     console.log($(this).siblings(".description").val())
@@ -8,6 +8,17 @@ $(".saveBtn").on("click", function(){
     localStorage.setItem(id, type);
 })
 
-var now = moment();
-var humanReadable = now.format("HH;MM:SS");
-console.log(humanReadable);
+var current_hour = parseInt(moment().format("H"))  //return '0' through '23' as strings. parseint turns it into an int
+for(var i = 9; i < 18; i++) {
+  if (i < current_hour) {
+    //apply past class to hour
+    $("#9am 10am").addClass("past");
+  } else if (i > current_hour) {
+    //apply future class
+    $("#1pm 2pm").addClass("future");
+  } else {
+    //apply present class
+    $("#11am 12pm").addClass("present");
+  }
+
+}
