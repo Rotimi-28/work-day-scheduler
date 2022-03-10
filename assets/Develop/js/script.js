@@ -12,13 +12,13 @@ var current_hour = parseInt(moment().format("H"))  //return '0' through '23' as 
 for(var i = 9; i < 18; i++) {
   if (i < current_hour) {
     //apply past class to hour
-    $("#9am 10am").addClass("past");
+    $("#hour-" + i).addClass("past");
   } else if (i > current_hour) {
     //apply future class
-    $("#1pm 2pm").addClass("future");
+    $("#hour-" + i).addClass("future");
   } else {
     //apply present class
-    $("#11am 12pm").addClass("present");
+    $("#hour-" + i).addClass("present");
   }
 
 }
