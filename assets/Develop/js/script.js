@@ -22,3 +22,27 @@ for(var i = 9; i < 18; i++) {
   }
 
 }
+
+var text = localStorage.getItem("hour-9")
+$("#hour-9").val(text)
+
+var text = localStorage.getItem("hour-10")
+$("#hour-10").val(text)
+
+var text = localStorage.getItem("hour-11")
+$("#hour-11").val(text)
+
+var text = localStorage.getItem("hour-12")
+$("#hour-12").val(text)
+
+var text = localStorage.getItem("hour-13")
+$("#hour-13").val(text)
+
+var text = localStorage.getItem("hour-14")
+$("#hour-14").val(text)
+
+var text = localStorage.getItem("hour-15")
+$("#hour-15").val(text)
+
+var text = localStorage.getItem("hour-16")
+$("#hour-16").val(text)
